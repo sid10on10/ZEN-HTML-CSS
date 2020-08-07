@@ -1,64 +1,104 @@
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jumbotron Design</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML - Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-  <div class="outerbox">
-    <div class="innerbox">
-      <div class="header">
-        <span style="color: black;display: inline-block;float: left;"><h3>Starter Template Jumbotron</h3></span>
-
-        <span style="display: inline-block;float: right;position: relative;right:180px;top:15px;"><Button style="background-color: #007bff;padding: 7px;">Home</Button></span>
-        <span style="display: inline-block;float: right;position: relative;top:15px;left:5px"><Button style="padding: 7px;">About</Button></span>
-        <span style="display: inline-block;float: right;position: relative;top:15px;right:2px;"><Button style="padding: 7px;">Contact</Button></span>
-        <div style="clear: both;"></div>
-      </div>
-      <hr style="color: black;">
-      <br>
-      <div class="jumbotron">
-        <div class="jumbotron-header">
-          <h1 style="font-size: 70px;text-align: center;font-family: sans-serif;">Jumbotron Heading</h1>
-  
-          <h4 style="text-align: center;position: relative;bottom: 30px;padding-left: 15px;padding-right: 15px;font-family: monospace;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae beatae tenetur ullam officiis quasi delectus maxime nihil porro? Impedit deserunt necessitatibus earum nesciunt quisquam dolore labore, soluta obcaecati eligendi exercitationem.</h4>
-          <br>
-          <button style="padding: 15px;background-color: green;border-radius: 5px;font-size: 20px;margin-left:280px;position: relative;bottom: 50px;">Sign up today</button>
-          <br>
-          <button style="padding: 15px;background-color: #007bff;border-radius: 5px;font-size: 20px;margin-left:255px;position: relative;bottom: 40px;">Launch Demo Model</button>
-        </div>
-      </div>
-      <br>
-      <div class="row">
-        <div class="column">
-          <h2>Subheading</h2>
-          <p style="text-align: left;">Lorem ipsum dolor sit amet consectetur adipisicing elitmaiores quo illo odit officia excepturi quodm esse!</p>
-          <h2>Subheading</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elitmaiores quo illo odit officia excepturi quodm esse!</p>
-          <h2>Subheading</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elitmaiores quo illo odit officia excepturi quodm esse!</p>
-        </div>
-        <div class="column">
-          <h2>Subheading</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elitmaiores quo illo odit officia excepturi quodm esse!</p>
-          <h2>Subheading</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elitmaiores quo illo odit officia excepturi quodm esse!</p>
-          <h2>Subheading</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elitmaiores quo illo odit officia excepturi quodm esse!</p>
-        </div>
-      </div>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      
-      <br>
-      <h5>Starter Created by Siddhant Singh</h5>
-
+    <div class="outer-container">
+        <form onsubmit="sendData()">
+            <h2 style="text-align: center;">Register Form</h2>
+            <div class="input-container">
+                <div class="input-div">
+                    <span style="display: inline-block;float: left;">Full Name</span>
+                    <span style="display: inline-block; float: right;"><i class="fa fa-user icon"></i>
+                        <input class="input-field" type="text" placeholder="Full Name" name="name" required>
+                    </span>
+                </div>  
+            </div>
+          
+            <div class="input-container">
+                <div class="input-div">
+                    <span style="display: inline-block;float: left;">Address Line 1</span>
+                    <span style="display: inline-block; float: right;"><i class="fa fa-user-circle icon"></i>
+                        <input class="input-field" type="text" placeholder="Address Line 1" name="address1">
+                    </span>
+                </div>  
+            </div>
+          
+            <div class="input-container">
+                <div class="input-div">
+                    <span style="display: inline-block;float: left;">Address Line 2</span>
+                    <span style="display: inline-block; float: right;"><i class="fa fa-user-circle icon"></i>
+                        <input class="input-field" type="text" placeholder="Address Line 2" name="address2">
+                    </span>
+                </div>  
+            </div>
+            <div class="input-container">
+                <div class="input-div">
+                    <span style="display: inline-block;float: left;">City</span>
+                    <span style="display: inline-block; float: right;"><i class="fa fa-building-o icon"></i>
+                        <input class="input-field" type="text" placeholder="City" name="city" required>
+                    </span>
+                </div>  
+            </div>
+            <div class="input-container">
+                <div class="input-div">
+                    <span style="display: inline-block;float: left;">State/Region</span>
+                    <span style="display: inline-block; float: right;"><i class="fa fa-map-marker icon"></i>
+                        <input class="input-field" type="text" placeholder="State/Region" name="region">
+                    </span>
+                </div>  
+            </div>
+            <div class="input-container">
+                <div class="input-div">
+                    <span style="display: inline-block;float: left;">Postal Code/ZIP</span>
+                    <span style="display: inline-block; float: right;"><i class="fa fa-envelope icon"></i>
+                        <input class="input-field" type="text" placeholder="Postal Code/ ZIP" name="zip">
+                    </span>
+                </div>  
+            </div>
+            <div class="input-container">
+                <div class="input-div">
+                    <span style="display: inline-block;float: left;">Country</span>
+                    <span style="display: inline-block; float: right;"><i class="fa fa-flag icon"></i>
+                        <select class="input-field">
+                            <option value="">--Select Country--</option>
+                            <option value="IN">India</option>
+                            <option value="other">Others</option>
+                        </select>
+                    </span>
+                </div>  
+            </div>
+            <div class="input-container">
+                <div class="input-div">
+                    <span style="display: inline-block;float: left;">Email</span>
+                    <span style="display: inline-block; float: right;"><i class="fa fa-user icon"></i>
+                        <input class="input-field" type="email" placeholder="Email" name="email" required>
+                    </span>
+                </div>  
+            </div>
+            <div class="input-container">
+                <div class="input-div">
+                    <span style="display: inline-block;float: left;">Phone Number</span>
+                    <span style="display: inline-block; float: right;"><i class="fa fa-user icon"></i>
+                        <input class="input-field" type="text" placeholder="Phone" name="phone" minlength="10" maxlength="13" required>
+                    </span>
+                </div>  
+            </div>
+            <div style="text-align: center;">
+                <button type="submit" class="btn" style="text-align: center;">Submit</button>
+            </div>
+        </form>
     </div>
-  </div>
-  
+
+    <script>
+        function sendData(){
+            alert("Thanks for submitting")
+        }
+    </script>
+    
 </body>
 </html>
